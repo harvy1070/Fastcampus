@@ -1,0 +1,7 @@
+def solution(n):
+    n = 1260
+    coin = [500, 100, 50, 10]
+    for i in range(coin):
+        cnt += n // i
+        n %= i
+    return n
