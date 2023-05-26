@@ -15,7 +15,7 @@ if __name__ == "__main__":
     print(product_list)
 
     # 상품 리스트 테이블 추가
-    product_list.to_sql('productList', conn, if_exists='append', index = False)
+    product_list.to_sql('productList', conn, if_exists = 'append', index = False)
 
     # 주문 목록 추가
     c.execute(

@@ -6,6 +6,7 @@ import fnmatch
 import pathlib
 import shutil
 
+os.getcwd()
 
 # 폴더별 파일명 받아 엑셀파일에 작성하는 함수
 def getFileName(trg_path):
@@ -60,8 +61,8 @@ def excelRead(filepath: str) -> tuple:
 
 def fileRename(datalist : list):
     for data in datalist:
-        print(data[1]+"의 파일명을"+data[2]+"로 변경합니다.")
-        #data[0] : 폴더경로, data[1] : 변경전 파일명, data[2] : 변경 후 파일명
+        # print(data[1]+"의 파일명을"+data[2]+"로 변경합니다.") # type error
+        # data[0] : 폴더경로, data[1] : 변경전 파일명, data[2] : 변경 후 파일명
         os.rename(data[0]+data[1], data[0]+data[2])
 
 
@@ -115,8 +116,8 @@ def moveFile(clean_path, trg_path, categorylist):
 
 if __name__ == "__main__":
     # 정리 대상 폴더 경로 지정
-    trg_path = './fuzzy_folder_1'
-    clean_path = './clean_folder'
+    trg_path = r'C:\Users\kwon\Fastcampus\Part1\ch04. [파일디렉터리] 업무효율 향상을 위한 폴더 관리 프로그램 만들기\fuzzy_folder'
+    clean_path = r'C:\Users\kwon\Fastcampus\Part1\ch04. [파일디렉터리] 업무효율 향상을 위한 폴더 관리 프로그램 만들기\clean_folder'
 
     # 압축 파일 확인
     zipf_path = []
